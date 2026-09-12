@@ -1,0 +1,15 @@
+---
+description: Gera coleções JSON, environments e scripts pw.expect para importação direta no Hoppscotch.
+globs: ["**/*Controller.java", "**/api/**", "**/*hoppscotch*.json", "**/openapi*.yaml", "**/swagger*.json"]
+alwaysApply: false
+---
+
+# Hoppscotch Collection & Test Generator (.cursorrules)
+
+Geração de coleções e testes automatizados para Hoppscotch (alternativa open-source ao Postman).
+
+## 🛑 Regras Obrigatórias
+1. **Sintaxe de Variáveis**: Use SEMPRE `<<variavel>>` (proibido `{{variavel}}`).
+2. **Scripts de Teste**: Use SEMPRE o namespace `pw.*` (`pw.expect(pw.response.status).toBe(...)`).
+3. **Host Dinâmico**: Inicie endpoints sempre com `<<baseUrl>>`.
+4. **JSON Válido**: Entregue sempre um array JSON válido `[{"v": 2, "name": "...", "folders": [...], "requests": [...]}]`.

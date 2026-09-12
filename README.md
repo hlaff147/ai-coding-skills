@@ -1,6 +1,6 @@
-# 🧠 AI Coding Skills — 22 Production-Ready Skills for AI-Powered IDEs
+# 🧠 AI Coding Skills — 23 Production-Ready Skills for AI-Powered IDEs
 
-> **A curated collection of 22 high-impact AI coding skills, each implemented in multiple IDE formats (Cursor, GitHub Copilot, Windsurf, Cline, Claude Code, Gemini/Antigravity).**
+> **A curated collection of 23 high-impact AI coding skills, each implemented in multiple IDE formats (Cursor, GitHub Copilot, Windsurf, Cline, Claude Code, Gemini/Antigravity).**
 
 ## 📖 What Are AI Coding Skills?
 
@@ -30,7 +30,7 @@ AI Coding Skills (also called "rules", "instructions", or "custom instructions")
 
 ---
 
-## 🎯 The 22 Skills
+## 🎯 The 23 Skills
 
 | # | Skill | Category | Problem It Solves | IDE Formats |
 |---|-------|----------|-------------------|-------------|
@@ -56,6 +56,7 @@ AI Coding Skills (also called "rules", "instructions", or "custom instructions")
 | 20 | [**Kubernetes HPA Config Helper**](./20-k8s-hpa-config-helper/) | 🟠 Operations | HPA flapping/thrashing, missing scaleDown stabilization windows, single-replica risk | 4 formats |
 | 21 | [**Java Code Review Checklist**](./21-java-code-review-checklist/) | 🟢 Language | Netty event loop blocking, mutable DTO state, N+1 queries, PII leakage in logs | 4 formats |
 | 22 | [**Incident Postmortem & RCA Writer**](./22-postmortem-writer/) | 🟣 Management | Finger-pointing culture, missing timeline accuracy, lack of 5 Whys & tracked actions | 4 formats |
+| 23 | [**Hoppscotch Collection Generator**](./23-hoppscotch-collection-generator/) | 🔵 API Testing | Postman vendor lock-in, manual collection authoring, missing pw.expect tests | 4 formats |
 
 ---
 
@@ -288,5 +289,6 @@ ai-coding-skills/
 ├── 19-k8s-resource-sizing/                # K8s requests/limits & JVM memory calculation
 ├── 20-k8s-hpa-config-helper/              # Kubernetes HPA v2 autoscaling configuration
 ├── 21-java-code-review-checklist/         # Senior code review checklist (Java/Micronaut)
-└── 22-postmortem-writer/                  # Blameless postmortem & 5 Whys RCA reports
+├── 22-postmortem-writer/                  # Blameless postmortem & 5 Whys RCA reports
+└── 23-hoppscotch-collection-generator/    # Hoppscotch API collections & pw.expect tests
 ```
