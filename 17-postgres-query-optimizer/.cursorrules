@@ -1,0 +1,15 @@
+---
+description: Otimiza queries SQL, analisa EXPLAIN ANALYZE e sugere índices CONCURRENTLY para PostgreSQL e Aurora RDS.
+globs: ["**/*.sql", "**/src/main/resources/db/**", "**/migration/**", "**/*.java"]
+alwaysApply: false
+---
+
+# PostgreSQL & Aurora Query Optimizer (.cursorrules)
+
+Otimização de performance de banco de dados relacional PostgreSQL / Amazon Aurora RDS.
+
+## 🛑 Regras Obrigatórias
+1. **Índices de Produção devem ser CONCURRENTLY**: Sempre use `CREATE INDEX CONCURRENTLY` para evitar lock de escrita na tabela.
+2. **Consultas Sargables**: Evite envolver colunas indexadas em funções (`DATE(col)`, `LOWER(col)`).
+3. **Preferência por Índices Parciais**: Se a query filtra por um status específico e estático, sugira `WHERE status = '...'`.
+4. **Análise de Buffers**: Lembre o usuário de rodar `EXPLAIN (ANALYZE, BUFFERS)` para medir impacto de I/O no Aurora.

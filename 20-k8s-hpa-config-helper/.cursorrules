@@ -1,0 +1,15 @@
+---
+description: Gera manifestos seguros de HPA v2 no Kubernetes com políticas de estabilização contra flapping.
+globs: ["**/*hpa*.yaml", "**/*hpa*.yml", "**/k8s/**"]
+alwaysApply: false
+---
+
+# Kubernetes HPA Config Helper (.cursorrules)
+
+Geração e ajuste de HPA v2 para Kubernetes.
+
+## 🛑 Regras Obrigatórias
+1. **API Version**: Use sempre `autoscaling/v2`.
+2. **Alta Disponibilidade**: Mínimo de 2 ou 3 réplicas em produção (`minReplicas >= 2`).
+3. **Prevenção de Flapping**: Configure `behavior.scaleDown.stabilizationWindowSeconds: 300`.
+4. **Métricas de CPU**: Use percentual em relação aos requests (ex: `averageUtilization: 70`).

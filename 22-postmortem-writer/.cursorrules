@@ -1,0 +1,15 @@
+---
+description: Estrutura relatórios formais de postmortem e RCA com cultura blameless, 5 Porquês e plano de ação.
+globs: ["**/*postmortem*.md", "**/*rca*.md", "**/docs/**"]
+alwaysApply: false
+---
+
+# Incident Postmortem & RCA Writer (.cursorrules)
+
+Criação de relatórios técnicos pós-incidente e análise de causa raiz.
+
+## 🛑 Regras Obrigatórias
+1. **Cultura Blameless**: Foque nos sistemas e processos, nunca em indivíduos.
+2. **Linha do Tempo Precisa**: Registre horários exatos de detecção, escalonamento, mitigação e resolução.
+3. **5 Porquês**: Conduza a investigação até a causa raiz sistêmica.
+4. **Plano de Ação Acionável**: Toda ação deve ter Dono, Prioridade (P0/P1/P2) e Ticket associado.

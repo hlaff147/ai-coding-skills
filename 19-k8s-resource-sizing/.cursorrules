@@ -1,0 +1,14 @@
+---
+description: Dimensiona requests e limits de CPU e memória para pods Kubernetes rodando microsserviços Java/Micronaut.
+globs: ["**/*.yaml", "**/*.yml", "**/k8s/**", "**/deployment*.yaml"]
+alwaysApply: false
+---
+
+# Kubernetes Resource Sizing (.cursorrules)
+
+Cálculo de requests/limits para containers Java/Micronaut no Kubernetes.
+
+## 🛑 Regras Obrigatórias
+1. **Margem de Heap**: `limits.memory` deve ser pelo menos 30% maior que o Heap máximo da JVM.
+2. **QoS Guaranteed**: Para serviços críticos, iguale `requests.memory` a `limits.memory` para evitar despejo (eviction) pelo kubelet.
+3. **Margem de CPU no Startup**: Forneça `limits.cpu` suficiente para inicialização e compilação JIT rápida sem throttling.

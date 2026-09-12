@@ -1,0 +1,20 @@
+---
+description: Diagnostica falhas de pods no Kubernetes (CrashLoopBackOff, OOMKilled, Pending, ImagePullBackOff, Probe failures).
+globs: ["**/*.yaml", "**/*.yml", "**/k8s/**", "**/helm/**"]
+alwaysApply: false
+---
+
+# Kubernetes Pod Troubleshooting (.cursorrules)
+
+Diagnostica e resolve problemas de execução de containers e pods no Kubernetes com ênfase em microsserviços Java/Micronaut.
+
+## 🛑 Diretrizes de Diagnóstico
+1. **Identifique o Exit Code antes de sugerir soluções**:
+   - Exit 137: OOMKilled (ajustar limits de memória ou `-XX:MaxRAMPercentage`).
+   - Exit 1: Falha na aplicação (verificar `kubectl logs --previous`).
+   - Exit 143: SIGTERM (probe failure ou graceful shutdown abortado).
+2. **Proponha sempre Comandos de Verificação**:
+   - `kubectl describe pod`
+   - `kubectl logs --previous`
+   - `kubectl get events --sort-by=.metadata.creationTimestamp`
+3. **Forneça Soluções em YAML**: Exiba sempre o bloco `resources` ou `startupProbe` corrigido.

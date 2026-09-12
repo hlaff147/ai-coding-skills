@@ -1,0 +1,16 @@
+---
+description: Aplica checklist rigorosa de code review em Java 21+ e Micronaut 4+ (concorrência, N+1, AOT, logs e segurança).
+globs: ["**/*.java"]
+alwaysApply: false
+---
+
+# Java & Micronaut Code Review Checklist (.cursorrules)
+
+Revisão de código especializada para Java e Micronaut.
+
+## 🛑 Itens Bloqueantes de Aprovação
+1. **Bloqueio de Netty**: I/O bloqueante deve usar `@ExecuteOn(TaskExecutors.BLOCKING)`.
+2. **Injeção**: Proibido `@Inject` em campos privados; somente injeção por construtor.
+3. **Imutabilidade**: DTOs devem ser Java Records com validações Bean Validation.
+4. **N+1 no Banco**: Repositórios devem usar `@Join(FETCH)` para relacionamentos.
+5. **Segurança**: Sem PII ou credenciais em logs ou exceptions.

@@ -1,0 +1,15 @@
+---
+description: Gera consumers resilientes de AWS SQS em Micronaut com idempotência, tratamento de DLQ e execução assíncrona.
+globs: ["**/*Consumer.java", "**/*Listener.java", "**/src/main/resources/application*.yml"]
+alwaysApply: false
+---
+
+# AWS SQS Consumer Scaffold (.cursorrules)
+
+Criação e revisão de listeners AWS SQS em microsserviços Micronaut.
+
+## 🛑 Regras Obrigatórias
+1. **Idempotência**: Sempre verifique se o identificador do evento já foi processado antes de executar a lógica de negócio.
+2. **Tratamento de Erros**: Nunca capture exceção com `catch (Exception e) {}` vazio. Se a mensagem falhou, propague a exceção para acionar a DLQ do SQS.
+3. **Thread Pool**: Garanta `@ExecuteOn(TaskExecutors.BLOCKING)` no método listener.
+4. **Variáveis**: Obtenha URLs/nomes de filas via `${aws.sqs.nome-fila}`.

@@ -1,6 +1,6 @@
-# 🧠 AI Coding Skills — 13 Production-Ready Skills for AI-Powered IDEs
+# 🧠 AI Coding Skills — 22 Production-Ready Skills for AI-Powered IDEs
 
-> **A curated collection of 13 high-impact AI coding skills, each implemented in multiple IDE formats (Cursor, GitHub Copilot, Windsurf, Cline, Claude Code, Gemini/Antigravity).**
+> **A curated collection of 22 high-impact AI coding skills, each implemented in multiple IDE formats (Cursor, GitHub Copilot, Windsurf, Cline, Claude Code, Gemini/Antigravity).**
 
 ## 📖 What Are AI Coding Skills?
 
@@ -30,7 +30,7 @@ AI Coding Skills (also called "rules", "instructions", or "custom instructions")
 
 ---
 
-## 🎯 The 13 Skills
+## 🎯 The 22 Skills
 
 | # | Skill | Category | Problem It Solves | IDE Formats |
 |---|-------|----------|-------------------|-------------|
@@ -47,6 +47,15 @@ AI Coding Skills (also called "rules", "instructions", or "custom instructions")
 | 11 | [**Java Micronaut 4+ Standards**](./11-java-micronaut-standards/) | 🟢 Language | Spring habits in Micronaut, field injection, N+1 queries, reflection breaking GraalVM | 4 formats |
 | 12 | [**Cursor Deploy Commit Guardrail**](./12-cursor-deploy-commit-guardrail/) | 🟡 Workflow | Inadvertent/missing CI/CD deploys on standard commits; enforces `#deployuat #auto` prompt | 4 formats |
 | 13 | [**Empty Deploy Commit Trigger**](./13-empty-deploy-commit-trigger/) | 🟡 Workflow | Manual overhead creating empty deploy commits; automates `ci: #deployuat #auto` + push | 4 formats |
+| 14 | [**GitLab MR Description Generator**](./14-mr-description-generator/) | 🟡 Workflow | Incomplete/vague MR descriptions, missing test evidence & rollback plans | 4 formats |
+| 15 | [**Daily Standup Summary**](./15-daily-standup-summary/) | 🟡 Workflow | Unprepared daily standups, verbose/unfocused status updates in Slack/Teams | 4 formats |
+| 16 | [**Kubernetes Pod Troubleshooting**](./16-k8s-pod-troubleshooting/) | 🟠 Operations | Blind pod restarts, JVM OOMKilled (Exit 137), probe failures & crashes | 4 formats |
+| 17 | [**PostgreSQL & Aurora Query Optimizer**](./17-postgres-query-optimizer/) | 🔵 Database | Slow SQL queries, dangerous production table locks, sequential scans | 4 formats |
+| 18 | [**AWS SQS Consumer Scaffold**](./18-aws-sqs-consumer-scaffold/) | 🟠 Cloud/Messaging | Missing idempotency, swallowed exceptions discarding DLQ, blocking Netty threads | 4 formats |
+| 19 | [**Kubernetes Resource Sizing**](./19-k8s-resource-sizing/) | 🟠 Operations | JVM heap vs container limits mismatch (Exit 137), aggressive CFS CPU throttling | 4 formats |
+| 20 | [**Kubernetes HPA Config Helper**](./20-k8s-hpa-config-helper/) | 🟠 Operations | HPA flapping/thrashing, missing scaleDown stabilization windows, single-replica risk | 4 formats |
+| 21 | [**Java Code Review Checklist**](./21-java-code-review-checklist/) | 🟢 Language | Netty event loop blocking, mutable DTO state, N+1 queries, PII leakage in logs | 4 formats |
+| 22 | [**Incident Postmortem & RCA Writer**](./22-postmortem-writer/) | 🟣 Management | Finger-pointing culture, missing timeline accuracy, lack of 5 Whys & tracked actions | 4 formats |
 
 ---
 
@@ -270,5 +279,14 @@ ai-coding-skills/
 ├── 10-token-router-optimizer/             # Token consumption optimization
 ├── 11-java-micronaut-standards/           # Java 21+ & Micronaut 4 AOT
 ├── 12-cursor-deploy-commit-guardrail/     # Interactive deploy commit guardrail
-└── 13-empty-deploy-commit-trigger/        # Empty trigger commit (ci: #deployuat #auto)
+├── 13-empty-deploy-commit-trigger/        # Empty trigger commit (ci: #deployuat #auto)
+├── 14-mr-description-generator/           # GitLab MR description generator
+├── 15-daily-standup-summary/              # Daily standup synthesis (Slack/Teams)
+├── 16-k8s-pod-troubleshooting/            # K8s pod crash & OOM troubleshooting
+├── 17-postgres-query-optimizer/           # PostgreSQL & Aurora query optimization
+├── 18-aws-sqs-consumer-scaffold/          # AWS SQS consumer boilerplate & idempotency
+├── 19-k8s-resource-sizing/                # K8s requests/limits & JVM memory calculation
+├── 20-k8s-hpa-config-helper/              # Kubernetes HPA v2 autoscaling configuration
+├── 21-java-code-review-checklist/         # Senior code review checklist (Java/Micronaut)
+└── 22-postmortem-writer/                  # Blameless postmortem & 5 Whys RCA reports
 ```

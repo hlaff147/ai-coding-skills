@@ -1,0 +1,30 @@
+---
+description: Gera resumos ágeis e estruturados de Daily Standup (Ontem, Hoje, Bloqueios) para canais como Slack, Teams ou reuniões síncronas.
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Daily Standup Summary Generator (.cursorrules)
+
+Transforma commits recentes, status do git ou notas do desenvolvedor em mensagens objetivas para a reunião de Daily Standup.
+
+## 🛑 Regras Principais
+1. **Foco em Resultados de Engenharia**: Destaque código entregue, MRs abertos, bugs resolvidos ou deploys realizados.
+2. **Formato Direto (Ontem / Hoje / Bloqueios)**: Máximo de 3 itens por seção.
+3. **Impedimentos Acionáveis**: Se houver bloqueio, explicite o que/quem está bloqueando.
+
+## 📋 Template de Resposta
+```markdown
+*📌 Daily Standup*
+
+*⏪ Ontem:*
+• [Ação concluída com ID do ticket/MR]
+• [Avanço relevante]
+
+*⏩ Hoje:*
+• [Foco principal de entrega do dia]
+• [Passo secundário ou testes]
+
+*🚧 Bloqueios:*
+• [Nenhum ou descrever dependência com @responsável]
+```
